@@ -1,47 +1,24 @@
+# Artificial-Intelligence-Applications
+
+Practicing Deep Learning in Python applied in the real world.
+
 # Introduction
 
-In the predictive analysis discipline we aim to develop statistical models, based on data, for a particular outcome of interest. From this model, we make sure that behavioral learning and past experiences have a model with good generalization.
+Deep learning is a subset of machine learning in artificial intelligence (AI) that has networks capable of learning unsupervised from data that is unstructured or unlabeled. Also known as deep neural learning or deep neural network
 
-In this project, we developed a set of tasks to go further in Predictive Analytics by exploring some Deep Learning techniques.
+This website intends to present the work analysis for the *"Análise Econômica e Geração de Valor"* class assignment.
 
-This website intends to present the work analysis for the *"Análise Preditiva Avançada"* class assignment.
-
-```
-Trabalho em grupo de 3 a 4 alunos envolvendo técnicas de aprendizado supervisionado 
-de máquina com Deep learning.
-
-Possíveis trabalhos:
-
-- Classificação ou Previsão, Dados Numéricos ou Categóricos, Estilo de problema 
-similar às Regressões Logística ou Linear;
-- Principalmente no caso de processamento de texto em linguagem natural;
-- Classificação de imagens com Redes Convolutivas;
-- Previsão de Texto com Redes Sequenciais;
-- Geração de conteúdo (música por exemplo) com redes Auto-Generativas;
--  Mix de estilos artísticos com Redes Convolutivas / Auto-Generativas.
-
-Material a ser entregue:
-
-Se fizer em Python (recomendado): Jupyter Notebook com base e resultados (no caso de 
-dados não submetidos à confidencialidade) ou apenas o Jupyter Notebook (com algumas 
-referências de dados que possam "validar" o modelo de rede neural entregue).
-
-Se fizer em R: Entregar a base de dados e o Rmarkdown. As bibliotecas de machine 
-learning mais utilizadas (scikit-learn, tensorflow e keras) estão disponíveis também 
-no R, porém com um print-end. É necessário instalar o Python para executalas.
-```
-:link: See the final website report in Rodrigo Gonçalves' Kaggle profile at: [https://www.kaggle.com/rodrigonca/advanced-predictive-analysis-cnn-implementation](https://www.kaggle.com/rodrigonca/advanced-predictive-analysis-cnn-implementation).
-
-:octocat: Alternatively, run a binder container: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ldaniel/Advanced-Predictive-Analytics/master?filepath=notebooks%2Ffgv_assignment%2Fadvanced-predictive-analysis-cnn-implementation.ipynb)
+:octocat: Run the project on binder at: (soon)
 
 ## Professor
-- Gustavo Mirapalheta
+- Bernardo Aflalo
 
 ## Authors / Students
 |Profile|Name|E-mail|
 |---|---|---|
 |<a href="https://github.com/DanielFCampos"><img src="https://avatars2.githubusercontent.com/u/31582602?s=460&v=4" title="DanielFCampos" width="80" height="80"></a>|Daniel Campos|[(daniel.ferraz.campos@gmail.com)](daniel.ferraz.campos@gmail.com)|
 |<a href="https://github.com/ldaniel"><img src="https://avatars2.githubusercontent.com/u/205534?s=460&v=4" title="ldaniel" width="80" height="80"></a>|Leandro Daniel|[(contato@leandrodaniel.com)](contato@leandrodaniel.com)|
+|<a href="https://github.com/ricardobreis"><img src="https://avatars2.githubusercontent.com/u/4885152?s=64&v=4" title="ricardobreis" width="80" height="80"></a>|Ricardo Reis|[(ricardo.l.b.reis@gmail.com)](ricardo.l.b.reis@gmail.com)|
 |<a href="https://github.com/RodriGonca"><img src="https://avatars2.githubusercontent.com/u/50252438?s=460&v=4" title="RodriGonca" width="80" height="80"></a>|Rodrigo Goncalves|[(rodrigo.goncalves@me.com)](rodrigo.goncalves@me.com)|
 |<a href="https://github.com/ygorlima1"><img src="https://avatars2.githubusercontent.com/u/52429828?s=460&v=4" title="ygorlima1" width="80" height="80"></a>|Ygor Lima|[(ygor_redesocial@hotmail.com)](ygor_redesocial@hotmail.com)|
 
