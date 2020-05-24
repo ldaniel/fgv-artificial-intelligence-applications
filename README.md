@@ -8,7 +8,9 @@ Deep learning is a subset of machine learning in artificial intelligence (AI) th
 
 This website intends to present the work analysis for the *"Análise Econômica e Geração de Valor"* class assignment.
 
-:octocat: Alternatively, run a binder container: [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ldaniel/Artificial-Intelligence-Applications/master)
+:octocat: Alternatively, run a binder container: 
+
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ldaniel/Artificial-Intelligence-Applications/master)
 
 ## Professor
 - Bernardo Aflalo
