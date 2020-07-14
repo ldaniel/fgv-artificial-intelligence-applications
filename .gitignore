@@ -134,3 +134,6 @@ dmypy.json
 # Spyder
 .Rproj.user
 *.Rproj
+
+# models
+*.h5
