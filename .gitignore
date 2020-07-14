@@ -128,7 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Pycharm
+.idea
+
 # Spyder
-.idea/
 .Rproj.user
 *.Rproj
