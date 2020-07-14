@@ -136,4 +136,5 @@ dmypy.json
 *.Rproj
 
 # models
-*.h5
+models/model_NN.h5
+models/model_CNN.h5
