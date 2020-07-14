@@ -4,7 +4,6 @@ from tensorflow.keras.models import load_model
 
 #model = load_model("../models/model_NN.h5")
 model = load_model("../models/model_CNN.h5")
-print("Loaded model from disk")
 
 pred_label = {
     0: 'Mask detected',
@@ -34,9 +33,6 @@ while True:
         slicedImg = img[face[1]:face[1] + face[3], face[0]:face[0] + face[2]]
         prediction = model.predict(prepare_image(img))
         prediction = np.argmax(prediction)
-
-        print(prediction)
-
         cv2.rectangle(img, (face[0], face[1]), (face[0] + face[2], face[1] + face[3]), pred_color[prediction], 2)
         cv2.putText(img, pred_label[prediction], (face[0], face[1] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2)
 
