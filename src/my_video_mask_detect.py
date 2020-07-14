@@ -2,10 +2,10 @@ import cv2
 import numpy as np
 from tensorflow.keras.models import model_from_json
 
-with open('model.json', 'r') as f:
+with open('../models/model_CNN.json', 'r') as f:
     loaded_model_json = f.read()
 model = model_from_json(loaded_model_json)
-model.load_weights("models/model_CNN.h5")
+model.load_weights("../models/model_CNN.h5")
 print("Loaded model from disk")
 
 resMap = {
