@@ -1,48 +1,46 @@
-import imutils
-import numpy as np
-from imutils.video import VideoStream
-from tensorflow import keras
 import cv2
-import time
+import numpy as np
+from tensorflow.keras.models import model_from_json
 
-#model_to_use = "mask_detector.model"
-model_to_use = "model_NN.h5"
-#model_to_use = "model_CNN.h5"
-model = keras.models.load_model(model_to_use)
+with open('model.json', 'r') as f:
+    loaded_model_json = f.read()
+model = model_from_json(loaded_model_json)
+model.load_weights("models/model_CNN.h5")
+print("Loaded model from disk")
+
+resMap = {
+    0: 'Mask detected',
+    1: 'Mask not detected'
+}
+
+colorMap = {
+    0: (0, 255, 0),
+    1: (0, 0, 255)
+}
 
 
-# Create a VideoCapture object and read from input file
-cap = VideoStream(src=0).start()
-time.sleep(2.0)
+def prepare_image(pth):
+    return cv2.resize(pth, (224, 224)).reshape(1, 224, 224, 3) / 255.0
 
-# Read until video is completed
+
+classifier = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+
+cap = cv2.VideoCapture(0)
 while True:
+    ret, img = cap.read()
+    faces = classifier.detectMultiScale(cv2.cvtColor(img, cv2.COLOR_BGR2GRAY), 1.1, 2)
 
-    # Capture frame-by-frame
-    frame = cap.read()
-    frame = imutils.resize(frame, width=400)
+    for face in faces:
+        slicedImg = img[face[1]:face[1] + face[3], face[0]:face[0] + face[2]]
+        prediction = model.predict(prepare_image(img))
+        prediction = np.argmax(prediction)
 
-    image_to_detect = frame
-    size = 256
+        cv2.rectangle(img, (face[0], face[1]), (face[0] + face[2], face[1] + face[3]), colorMap[prediction], 2)
+        cv2.putText(img, resMap[prediction], (face[0], face[1] - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.8, (255, 255, 255), 2)
 
-    #img = cv2.imread(image_to_detect, cv2.IMREAD_GRAYSCALE)
-    img = frame
-    img = cv2.resize(img, (size, size))
-    img = img / 255
-    img = np.array(img).reshape(-1, size, size, 1)
-
-    prediction = model.predict(img)
-    print(prediction)
-
-    # show the output frame
-    cv2.imshow("Frame", frame)
-    key = cv2.waitKey(1) & 0xFF
-
-    # if the `q` key was pressed, break from the loop
-    if key == ord("q"):
+    cv2.imshow('FaceMask Detection', img)
+    if cv2.waitKey(1) & 0xff == ord('q'):
         break
 
-# When everything done, release the video capture object
-cap.stop()
-# Closes all the frames
+cap.release()
 cv2.destroyAllWindows()
