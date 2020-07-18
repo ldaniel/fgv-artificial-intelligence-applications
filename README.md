@@ -33,6 +33,8 @@ This website intends to present the work analysis for the *"Análise Econômica 
     ├── data
     │   └── raw               <- The original, immutable data dump.
     │
+    ├── mini-paper            <- The final individual assignment given by Bernardo Aflalo
+    │
     ├── models                <- Trained and serialized models, model predictions, or model summaries
     │
     ├── notebooks             <- Jupyter notebooks. 
