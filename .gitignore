@@ -138,3 +138,4 @@ dmypy.json
 # models
 models/model_NN.h5
 models/model_CNN.h5
+*.h5
